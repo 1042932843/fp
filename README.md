@@ -5,7 +5,7 @@
 
 大概就是这个样子：
 
-<div style=" width:480">
+<div>
 <img src="https://github.com/1042932843/img-folder/blob/master/S81009-155912.jpg" width="120" /> 
 <img src="https://github.com/1042932843/img-folder/blob/master/S81009-155918.jpg" width="120" /> 
 <img src="https://github.com/1042932843/img-folder/blob/master/S81009-155934.jpg" width="120" /> 
