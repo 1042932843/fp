@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.dyhl.dusky.huangchuanfp"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 36
+        versionName '1.1.5.7'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi', 'armeabi-v7a', 'x86'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "bad021a843a43ce23078e816", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    signingConfigs {
+
+        config {
+            keyAlias 'huangchuanfp'
+            keyPassword '123456'
+            storeFile file('F:/pro1/huangchuanfp/fp.jks') // TODO 发布证书签名路径 需改
+            storePassword '123456'
+        }
+    }
+    buildTypes {
+        release {
+            //是否优化zip
+            zipAlignEnabled true
+            //启用代码混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+
+        debug {
+            //是否优化zip
+            zipAlignEnabled true
+            //启用代码混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+//修改打包不能成功配置
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "huangchuanfp_v${variant.versionName}_${releaseTime()}.apk"
+        }
+    }
+    allprojects {
+        repositories {
+            jcenter()
+            maven { url "https://raw.githubusercontent.com/Pgyer/mvn_repo_pgyer/master" }
+        }
+    }
+    productFlavors {
+    }
+}
+
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:27.1.1'//强制指定
+    }
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.1.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'cn.jiguang.sdk:jpush:3.1.1'
+    implementation 'cn.jiguang.sdk:jcore:1.1.9'
+    implementation 'com.zxy.android:tiny:0.0.6'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation 'com.alibaba:fastjson:1.2.47'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation project(path: ':imagepicker')
+    implementation project(path: ':MPChartLib')
+    implementation 'com.pgyersdk:sdk:2.8.1'
+    implementation 'com.google.android:flexbox:0.3.2'
+    implementation 'com.hynnet:jxl:2.6.12.1'
+    implementation 'jp.wasabeef:richeditor-android:1.2.2'
+}

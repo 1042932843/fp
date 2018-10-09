@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+
+    <android.support.v7.widget.CardView
+        card_view:cardElevation="5dp"
+        android:id="@+id/annuncement_layout"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/f_layout"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50">
+            <ImageView
+                android:id="@+id/laba"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:padding="@dimen/dp_12"
+                android:src="@drawable/annunce"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/point"
+                        android:visibility="gone"
+                        android:layout_width="@dimen/dp_6"
+                        android:layout_height="@dimen/dp_6"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/aii"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"/>
+                </RelativeLayout>
+
+            </FrameLayout>
+            <TextView
+                android:id="@+id/annuncement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/f_layout"
+                android:layout_toRightOf="@+id/f_layout"
+                android:singleLine="true"
+                android:maxEms="24"
+                android:textColor="@color/text1"
+                android:layout_marginLeft="@dimen/dp_3"
+
+                android:text="@string/app_name" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_16"
+        android:orientation="vertical"
+        android:layout_below="@+id/annuncement_layout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dp_12">
+
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/gpkh"
+                android:foreground="@drawable/middle_grey"
+                android:layout_width="@dimen/dp_56"
+                android:layout_height="@dimen/dp_56"
+                android:background="@drawable/shape_cir_bg"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:drawableTop="@drawable/bf_pkh"
+                    android:text="@string/pkh"
+                    android:textSize="@dimen/sp_12"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1">
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/wlog"
+                android:layout_width="@dimen/dp_56"
+                android:layout_height="@dimen/dp_56"
+                android:gravity="center"
+                android:foreground="@drawable/middle_grey"
+                android:background="@drawable/shape_cir_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:drawableTop="@drawable/bf_log"
+                    android:text="@string/xrz"
+                    android:textSize="@dimen/sp_12"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/location"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_56"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_50"
+            android:background="@drawable/shape_cir_bg"
+            android:foreground="@drawable/middle_grey"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:drawableTop="@drawable/bf_location"
+                android:text="@string/dingwei"
+                android:textSize="@dimen/sp_12"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_80"
+        android:id="@+id/bottom_bar"/>
+</RelativeLayout>

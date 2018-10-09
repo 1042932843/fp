@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_above="@+id/bottom_button"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="帮扶责任人名称"
+                    android:textSize="@dimen/sp_16"/>
+
+                <com.dyhl.dusky.huangchuanfp.Design.keyEditText.KeyEditText
+                    android:id="@+id/rz_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/btn_tip_gray_solid_bg"
+                    android:hint="请输入..."
+                    android:paddingBottom="@dimen/dp_4"
+                    android:paddingLeft="@dimen/dp_14"
+                    android:paddingRight="@dimen/dp_14"
+                    android:paddingTop="@dimen/dp_4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="贫困户名称"
+                    android:textSize="@dimen/sp_16"/>
+
+                <com.dyhl.dusky.huangchuanfp.Design.keyEditText.KeyEditText
+                    android:id="@+id/rz_pkhname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@drawable/btn_tip_gray_solid_bg"
+                    android:hint="请输入..."
+                    android:paddingBottom="@dimen/dp_4"
+                    android:paddingLeft="@dimen/dp_14"
+                    android:paddingRight="@dimen/dp_14"
+                    android:paddingTop="@dimen/dp_4" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时间"
+                    android:textSize="@dimen/sp_16"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_12">
+
+                    <Button
+                        android:id="@+id/start"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_36"
+                        android:textSize="@dimen/sp_14"
+                        android:hint="请选择"
+                        android:layout_alignParentTop="true"
+                        android:layout_toStartOf="@+id/line"
+                        android:paddingLeft="@dimen/dp_14"
+                        android:paddingRight="@dimen/dp_14"
+                        android:background="@drawable/btn_large_tip_gray_solid_bg"
+                        android:layout_toLeftOf="@+id/line" />
+                    <RelativeLayout
+                        android:id="@+id/line"
+                        android:layout_centerInParent="true"
+                        android:layout_height="@dimen/dp_1"
+                        android:layout_width="@dimen/dp_16"
+                        android:background="@color/gray_20"
+                        android:layout_margin="@dimen/dp_8"/>
+
+                    <Button
+                        android:id="@+id/end"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_36"
+                        android:hint="请选择"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_alignParentTop="true"
+                        android:paddingLeft="@dimen/dp_14"
+                        android:paddingRight="@dimen/dp_14"
+                        android:layout_toEndOf="@+id/line"
+                        android:background="@drawable/btn_large_tip_gray_solid_bg"
+                        android:layout_toRightOf="@+id/line" />
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/publicslayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:visibility="gone"
+                >
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/checkBox"
+                    android:text="屏蔽|公开"
+                    android:textColor="@color/text3"
+                    android:layout_toRightOf="@+id/checkBox" />
+                <Switch
+                    android:id="@+id/outp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <com.dyhl.dusky.huangchuanfp.Design.flexbox.widget.TagFlowLayout
+                android:id="@+id/flow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                app:alignContent="flex_start"
+                app:alignItems="center"
+                app:defaultDrawable="@drawable/btn_tip_gray_solid_bg"
+                app:defaultTextColor="@android:color/darker_gray"
+                app:dividerDrawable="@drawable/bg_flow_divider"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start"
+                app:mode="SINGLE"
+                app:selectDrawable="@drawable/btn_tip_select_solid_bg"
+                app:selectTextColor="@android:color/white"
+                app:showDivider="beginning|middle|end"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <include layout="@layout/layout_drawer_bottom_button"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_button"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+</RelativeLayout>

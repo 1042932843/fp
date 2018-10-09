@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/dp_12"
+    android:layout_marginLeft="@dimen/dp_12"
+    android:layout_marginRight="@dimen/dp_12"
+    android:layout_marginBottom="@dimen/dp_6"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_8">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="@string/app_name"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/text1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/pkst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                tools:text="@string/pk"
+                android:layout_toRightOf="@+id/name"
+                android:layout_toEndOf="@+id/name"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginBottom="@dimen/dp_6"
+            >
+            <include layout="@layout/line_h"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/pktype1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text1"
+                android:text="村负责人"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/pkcfzr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/pktype1"
+                tools:text="段"
+                android:textColor="@color/text3"
+                android:layout_toRightOf="@+id/pktype1"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                 />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            >
+            <TextView
+                android:id="@+id/pktype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="村办公电话"
+                android:textColor="@color/text1"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/pkcphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/pktype"
+                tools:text="187256663275"
+                android:textColor="@color/text3"
+                android:layout_toRightOf="@+id/pktype"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

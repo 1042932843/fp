@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_alignParentTop="true"
+    android:fitsSystemWindows="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="0dp"
+    card_view:contentPadding="1dp"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/dl"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:src="@drawable/user"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingStart="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_8"/>
+        <!--android:foreground="@drawable/middle_grey"-->
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/HeaderTitle"
+            android:layout_centerInParent="true"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="返回首页"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:paddingStart="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_8"
+            />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

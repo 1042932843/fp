@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48">
+<TextView
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:text="@string/app_name"
+    android:layout_centerVertical="true"
+    android:layout_toLeftOf="@+id/read"
+    />
+
+
+
+
+    <TextView
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_6"
+        android:paddingRight="@dimen/dp_6"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        tools:text="未读"
+        android:textSize="@dimen/sp_12"
+        android:layout_marginLeft="@dimen/dp_6"
+        android:layout_marginStart="@dimen/dp_6"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/title_layout"
+    android:layout_marginBottom="@dimen/dp_8"
+      >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text3"
+        tools:text="2018-04-18"/>
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/time"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginLeft="@dimen/dp_32"
+        android:textColor="@color/text3"
+        tools:text="来源:新华社"
+        android:layout_toRightOf="@+id/time" />
+
+    <TextView
+        android:id="@+id/publics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="公开"
+        android:textColor="@color/text3"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:textSize="@dimen/sp_12"
+        />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_20">
+
+    </RelativeLayout>
+</RelativeLayout>

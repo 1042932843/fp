@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backg">
+    <include
+        android:id="@+id/layout_bar"
+        layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:id="@+id/resetPw"
+        android:layout_below="@+id/layout_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/dp_12"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="密码"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:textColor="@color/text1"
+            android:textSize="@dimen/sp_16"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="修改"
+            android:gravity="center"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/text2"
+            android:drawableRight="@drawable/ic_action_next"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_12"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:background="@color/white"
+        android:paddingRight="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_12"
+        android:id="@+id/play_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_below="@+id/layout_bar"
+        android:overScrollMode="never"/>
+</RelativeLayout>

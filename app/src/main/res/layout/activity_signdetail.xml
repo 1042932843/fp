@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:layout_marginBottom="@dimen/dp_16">
+    <include
+        android:id="@+id/layout_bar"
+        layout="@layout/layout_title" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_bar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/fp_ren_layout"
+                android:layout_width="match_parent"
+
+                android:layout_height="42dp"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"
+                android:focusableInTouchMode="true">
+
+                <ImageView
+                    android:id="@+id/head2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+
+                    />
+
+                <TextView
+                    android:id="@+id/fp_ren_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/head2"
+                    android:layout_toRightOf="@+id/head2"
+                    android:gravity="center|left"
+                    android:textColor="@color/text1"
+                    android:textSize="@dimen/sp_16"
+                    tools:text="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/choice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/ic_action_down"
+                    android:gravity="center"
+                    android:text="更改"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/publics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="公开"
+                    android:textColor="@color/text3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_12"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fp_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_below="@+id/fp_ren_layout"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8"
+                android:focusableInTouchMode="true"
+                >
+
+                <ImageView
+                    android:id="@+id/head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+
+                    />
+
+                <TextView
+                    android:id="@+id/fp_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/head"
+                    android:layout_toRightOf="@+id/head"
+                    android:gravity="center|left"
+                    android:textColor="@color/text1"
+                    android:textSize="@dimen/sp_16"
+                    tools:text="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/ic_action_down"
+                    android:gravity="center"
+                    android:text="更改"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_20">
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_below="@+id/fp_name_layout"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/rz_time"
+                    android:gravity="center|left"
+                    android:textColor="@color/text3"
+                    tools:text="@string/app_name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_below="@+id/time_layout"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/rz_address"
+                    android:gravity="center|left"
+                    android:textColor="@color/text3"
+                    tools:text="@string/app_name" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/backg">
+
+                </RelativeLayout>
+            </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_below="@+id/add_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8">
+        <TextView
+            android:id="@+id/content"
+            android:drawableLeft="@drawable/rz_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:text="  详细描述(非必填)"
+            android:textColor="@color/text3"/>
+
+    </RelativeLayout>
+    <com.dyhl.dusky.huangchuanfp.Design.keyEditText.KeyEditText
+
+        android:enabled="false"
+        android:layout_centerVertical="true"
+        android:id="@+id/edit_text"
+        android:background="@null"
+        android:hint="没有内容..."
+        android:textColorHint="@color/text3"
+        android:layout_below="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:gravity="top"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text1"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_margin="@dimen/dp_8"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:layout_below="@+id/edit_text"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+        app:spanCount="1"
+        tools:listitem="@layout/item_image"/>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_bar">
+
+    </FrameLayout>
+</RelativeLayout>

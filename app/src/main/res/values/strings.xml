@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">潢川扶贫</string>
+    <string name="dingwei">定位</string>
+    <string name="xrz">日志签到</string>
+    <string name="pkh">我的帮扶</string>
+    <string name="sbjl">我的问题</string>
+    <string name="wdrz">我的日志</string>
+    <string name="bfzrr">帮扶责任人</string>
+    <string name="wdl">未登录</string>
+    <string name="pk">贫困</string>
+    <string name="wtsb">问题上报</string>
+    <string name="bfzc">帮扶政策</string>
+    <string name="tzgg">通知公告</string>
+    <string name="makesure">确定</string>
+    <string name="reset">重置</string>
+</resources>

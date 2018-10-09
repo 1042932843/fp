@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_bar"
+            layout="@layout/layout_title" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_48"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:background="@color/white">
+                <com.dyhl.dusky.huangchuanfp.Design.MySpinner
+                    android:id="@+id/ad_lv1"
+                    android:padding="@dimen/dp_4"
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                    android:spinnerMode="dialog"
+                    android:overlapAnchor="false"
+                    />
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_0_5"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@color/gray_20"/>
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/ad_lv2"
+                    android:padding="@dimen/dp_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:spinnerMode="dialog"
+                    android:overlapAnchor="false"
+                    android:overScrollMode="never"
+                 />
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_0_1"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@color/gray_20"/>
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/ad_lv3"
+                    android:padding="@dimen/dp_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:spinnerMode="dialog"
+                    android:overlapAnchor="false"
+                    android:overScrollMode="never"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/totallayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginRight="@dimen/dp_12"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    tools:text="共38个，已脱贫17个" />
+            </RelativeLayout>
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/play_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/backg"
+                        android:overScrollMode="never" />
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="没有查询到相关信息"/>
+                </RelativeLayout>
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        </LinearLayout>
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="@dimen/dp_280"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/white"
+            >
+
+        </FrameLayout>
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_button"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贫困户姓名"
+                android:textSize="@dimen/sp_16"/>
+
+            <com.dyhl.dusky.huangchuanfp.Design.keyEditText.KeyEditText
+                android:id="@+id/pkh_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@drawable/btn_tip_gray_solid_bg"
+                android:hint="请输入..."
+                android:paddingBottom="@dimen/dp_4"
+                android:paddingLeft="@dimen/dp_14"
+                android:paddingRight="@dimen/dp_14"
+                android:paddingTop="@dimen/dp_4" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="帮扶责任人姓名"
+                android:textSize="@dimen/sp_16"/>
+
+            <com.dyhl.dusky.huangchuanfp.Design.keyEditText.KeyEditText
+                android:id="@+id/pkh_responsible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@drawable/btn_tip_gray_solid_bg"
+                android:hint="请输入..."
+                android:paddingBottom="@dimen/dp_4"
+                android:paddingLeft="@dimen/dp_14"
+                android:paddingRight="@dimen/dp_14"
+                android:paddingTop="@dimen/dp_4" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贫困属性"
+                android:textSize="@dimen/sp_16" />
+            <com.dyhl.dusky.huangchuanfp.Design.flexbox.widget.TagFlowLayout
+                android:id="@+id/flow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                app:alignContent="flex_start"
+                app:alignItems="center"
+                app:defaultDrawable="@drawable/btn_tip_gray_solid_bg"
+                app:defaultTextColor="@android:color/darker_gray"
+                app:dividerDrawable="@drawable/bg_flow_divider"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start"
+                app:mode="SINGLE"
+                app:selectDrawable="@drawable/btn_tip_select_solid_bg"
+                app:selectTextColor="@android:color/white"
+                app:showDivider="beginning|middle|end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贫困状态"
+                android:textSize="@dimen/sp_16" />
+            <com.dyhl.dusky.huangchuanfp.Design.flexbox.widget.TagFlowLayout
+                android:id="@+id/flow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                app:alignContent="flex_start"
+                app:alignItems="center"
+                app:defaultDrawable="@drawable/btn_tip_gray_solid_bg"
+                app:defaultTextColor="@android:color/darker_gray"
+                app:dividerDrawable="@drawable/bg_flow_divider"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start"
+                app:mode="SINGLE"
+                app:selectDrawable="@drawable/btn_tip_select_solid_bg"
+                app:selectTextColor="@android:color/white"
+                app:showDivider="beginning|middle|end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="致贫原因"
+                android:textSize="@dimen/sp_16"/>
+            <com.dyhl.dusky.huangchuanfp.Design.flexbox.widget.TagFlowLayout
+                android:id="@+id/flow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                app:alignContent="flex_start"
+                app:alignItems="center"
+                app:defaultDrawable="@drawable/btn_tip_gray_solid_bg"
+                app:defaultTextColor="@android:color/darker_gray"
+                app:dividerDrawable="@drawable/bg_flow_divider"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start"
+                app:mode="SINGLE"
+                app:selectDrawable="@drawable/btn_tip_select_solid_bg"
+                app:selectTextColor="@android:color/white"
+                app:showDivider="beginning|middle|end"/>
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <include layout="@layout/layout_drawer_bottom_button"
+        android:id="@+id/bottom_button"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+</RelativeLayout>
