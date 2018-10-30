@@ -62,7 +62,7 @@ public class PovertyFamilyInfoAdapter extends RecyclerView.Adapter<PovertyFamily
         }
         holder.student.setText(home.get(position).getStudent());
         //holder.value.setText(home.get(position).getValue());
-
+        holder.age_value.setText(home.get(position).getAge());
         //单独对应类型的设置事件
         if( onItemClickListener!= null){
             holder.itemView.setOnClickListener( new View.OnClickListener() {
@@ -89,7 +89,7 @@ public class PovertyFamilyInfoAdapter extends RecyclerView.Adapter<PovertyFamily
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView xingming_value,guanxi_value,wenhuachengdu_value,jiankang_value,skill,work,worktime,student;
+        TextView xingming_value,guanxi_value,wenhuachengdu_value,jiankang_value,skill,work,worktime,student,age_value;
 
 
         public ViewHolder(View itemView) {
@@ -102,6 +102,7 @@ public class PovertyFamilyInfoAdapter extends RecyclerView.Adapter<PovertyFamily
             work=(TextView) itemView.findViewById(R.id.work_value);
             worktime=(TextView) itemView.findViewById(R.id.worktime_value);
             student=(TextView) itemView.findViewById(R.id.student_value);
+            age_value=(TextView) itemView.findViewById(R.id.age_value);
         }
     }
 

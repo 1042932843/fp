@@ -50,6 +50,39 @@
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_12">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_8">
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="年龄"/>
+
+            <TextView
+                android:id="@+id/age_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:text="0"
+                tools:text="@string/app_name"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="@dimen/dp_0_1"
         android:background="@color/gray_20"
 
@@ -312,5 +345,7 @@
         </RelativeLayout>
 
     </RelativeLayout>
+
+
 </LinearLayout>
 </android.support.v7.widget.CardView>

@@ -34,6 +34,16 @@ public class PovertyInformation implements Serializable {
     private String income;
     private String phone;
 
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    private String age;
+
     public String getCode() {
         return code;
     }
